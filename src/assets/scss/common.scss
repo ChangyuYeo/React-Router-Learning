@@ -1,0 +1,20 @@
+$primary: #1A237E;
+$secondary: #1877F2;
+
+// bootstrap
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+body {
+  color: $gray-900;
+  font-size: 100%;
+  line-height: 1.4;
+  font-family: 'Noto Sans KR', sans-serif;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { 
+    display: none !important; 
+  }
+}

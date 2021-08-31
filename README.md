@@ -1,24 +1,14 @@
 # vue_book_app
+카카오 API를 이용한 도서 검색 웹 애플리케이션 만들기!
+<br />
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## TodoList
+- [x]오픈 api 연결해서 테스트
+- [x]api 폴더 만들고 로직 구현하기
+- [ ]검색 시 target 설정 (title(제목), isbn (ISBN), publisher(출판사), person(인명))
+- [ ]검색 시 한 페이지에 보여질 문서 수 설정 (size) (10, 20, 30개씩 분할)
+- [ ]데이터 바인딩으로 각자 검색 데이터 연결하고 api 받아와서 책 정보 출력 테스트 해보기
+---
+- [ ]스토어 만들고 메인로직 구현하기
+- [ ]책 상세정보 페이지 만들기 (동적라우팅 처리하면 될듯)
+- [ ]타입스크립트 적용
