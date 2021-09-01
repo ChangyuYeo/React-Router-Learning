@@ -13,6 +13,7 @@ body {
   font-size: 100%;
   line-height: 1.4;
   font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
   -ms-overflow-style: none;
   &::-webkit-scrollbar { 
     display: none !important; 

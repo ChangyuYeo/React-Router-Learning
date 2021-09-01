@@ -13,6 +13,7 @@ export default {}
 
 <style lang="scss" scoped>
 .square {
+	overflow: hidden;
 	position: absolute;
 	&.square-1 {
 		top: 13%;

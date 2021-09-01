@@ -1,16 +1,19 @@
 <template>
 	<Headline />
 	<Input />
+	<BookList />
 </template>
 
 <script>
 import Headline from '@/components/Headline'
 import Input from '@/components/Input'
+import BookList from '@/components/BookList'
 
 export default {
 	components: {
 		Headline,
-		Input
+		Input,
+		BookList
 	}
 }
 </script>
