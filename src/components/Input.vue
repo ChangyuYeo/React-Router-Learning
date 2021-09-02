@@ -38,7 +38,6 @@ export default {
 			selected: 'title',
 			options: [
 				{ text: '도서 제목', value: 'title' },
-				{ text: 'ISBN', value: 'isbn' },
 				{ text: '출판사', value: 'publisher' },
 				{ text: '인명', value: 'person' }
 			],

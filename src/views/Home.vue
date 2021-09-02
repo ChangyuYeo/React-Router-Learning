@@ -1,7 +1,9 @@
 <template>
-	<Headline />
-	<Input />
-	<BookList />
+	<div>
+		<Headline />
+		<Input />
+		<BookList />
+	</div>
 </template>
 
 <script>

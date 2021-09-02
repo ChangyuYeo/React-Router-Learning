@@ -24,6 +24,7 @@ export default {
 <style lang="scss" scoped>
 .container {
 	margin-top: 30px;
+	padding: 0;
 	.books {
 		display: flex;
 		flex-wrap: wrap;

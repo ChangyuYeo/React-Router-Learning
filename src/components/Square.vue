@@ -69,5 +69,26 @@ export default {}
 	&.square-primary {
 		background-color: rgba($color: $primary, $alpha: 0.1);
 	}
+
+	@include media-breakpoint-down(sm) {
+		:is(&.square-1, &.square-4) {
+			width: 30px;
+			height: 30px;
+		}
+		&.square-2 {
+			width: 100px;
+			height: 100px;
+			left: -50px;
+		}
+		&.square-3 {
+			width: 80px;
+			height: 80px;
+			right: -35px;
+		}
+		:is(&.square-5, &.square-6) {
+			width: 20px;
+			height: 20px;
+		}
+	}
 }
 </style>

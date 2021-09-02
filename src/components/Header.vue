@@ -30,7 +30,7 @@ export default {
 				},
 				{
 					name: 'Books',
-					to: '/books'
+					to: '/books/1188612786'
 				}
 			]
 		}

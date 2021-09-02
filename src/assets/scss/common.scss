@@ -1,6 +1,14 @@
 $primary: #1A237E;
 $secondary: #1877F2;
 
+$container-max-widths: (
+  sm: 570px,
+  md: 780px,
+  lg: 972px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
 // bootstrap
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";

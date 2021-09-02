@@ -1,9 +1,28 @@
 <template>
-	<div>Books</div>
+	<div class="test">
+		<ACard hoverable style="width: 240px">
+			<img :src="`${book[0]?.thumbnail}`" width="200" />
+		</ACard>
+	</div>
 </template>
 
 <script>
-export default {}
+import { mapState } from 'vuex'
+
+export default {
+	computed: {
+		...mapState(['book'])
+	},
+
+	created() {
+		const book = this.$route.params.id
+		this.$store.dispatch('searchBookInfo', book)
+	}
+}
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.ant-card-body {
+	padding: 30px;
+}
+</style>

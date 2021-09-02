@@ -6,7 +6,7 @@ const routes = [
 		component: () => import('@/views/Home')
 	},
 	{
-		path: '/books',
+		path: '/books/:id',
 		component: () => import('@/views/Books')
 	}
 ]
