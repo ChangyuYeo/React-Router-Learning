@@ -16,8 +16,10 @@ export default {
 		Headline,
 		Input,
 		BookList
+	},
+
+	created() {
+		this.$store.commit('RESET_BOOKS')
 	}
 }
 </script>
-
-<style></style>

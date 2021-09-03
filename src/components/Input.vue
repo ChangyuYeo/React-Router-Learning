@@ -14,7 +14,7 @@
 			@keyup.enter="searchBooks"
 			class="form-control"
 			type="text"
-			placeholder="찾으시는 도서의 정보를 검색해 주세요!"
+			placeholder="찾으시는 도서의 정보를 자유롭게 검색해 주세요!"
 		/>
 		<select v-model="size" class="form-select">
 			<option
@@ -46,7 +46,9 @@ export default {
 			numbers: [
 				{ text: '10개씩', value: 10 },
 				{ text: '20개씩', value: 20 },
-				{ text: '30개씩', value: 30 }
+				{ text: '30개씩', value: 30 },
+				{ text: '40개씩', value: 40 },
+				{ text: '50개씩', value: 50 }
 			]
 		}
 	},
@@ -64,7 +66,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 section {
 	margin-top: 2%;
 	display: flex;

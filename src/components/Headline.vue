@@ -20,7 +20,7 @@
 	:nth-child(1) {
 		font-size: 50px;
 		font-weight: 600;
-		color: rgba($color: $primary, $alpha: 0.6);
+		color: $primary;
 	}
 	:nth-child(2) {
 		font-size: 20px;
