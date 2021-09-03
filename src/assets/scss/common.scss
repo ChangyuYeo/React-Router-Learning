@@ -18,10 +18,7 @@ $container-max-widths: (
 
 body {
   color: $gray-900;
-  font-size: 100%;
-  line-height: 1.4;
-  font-family: 'Noto Sans KR', sans-serif;
-  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif !important;
   -ms-overflow-style: none;
   &::-webkit-scrollbar { 
     display: none !important; 

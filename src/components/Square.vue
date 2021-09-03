@@ -33,7 +33,7 @@ export default {}
 	}
 	&.square-3 {
 		top: 36%;
-		right: -70px;
+		right: -20px;
 		height: 160px;
 		width: 160px;
 		transform: rotate(38deg);

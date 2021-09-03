@@ -4,7 +4,12 @@
 		<nav>
 			<ul class="nav">
 				<li v-for="(nav, index) in navs" :key="index" class="nav-item">
-					<RouterLink :to="nav.to" class="nav-link" active-class="active">
+					<RouterLink
+						:to="nav.to"
+						class="nav-link"
+						active-class="active"
+						:class="{ active: isMatch(nav.path) }"
+					>
 						{{ nav.name }}
 					</RouterLink>
 				</li>
@@ -30,9 +35,17 @@ export default {
 				},
 				{
 					name: 'Books',
-					to: '/books/1188612786'
+					to: '/books/1188612786',
+					path: /^\/books/
 				}
 			]
+		}
+	},
+
+	methods: {
+		isMatch(path) {
+			if (!path) return false
+			return path.test(this.$route.fullPath)
 		}
 	}
 }
