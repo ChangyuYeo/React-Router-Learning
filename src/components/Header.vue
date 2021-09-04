@@ -35,7 +35,7 @@ export default {
 				},
 				{
 					name: 'Books',
-					to: '/books/1188612786',
+					to: '/books/Do it! Vue.js 입문',
 					path: /^\/books/
 				}
 			]

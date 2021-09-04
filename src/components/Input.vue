@@ -25,7 +25,10 @@
 				{{ number.text }}
 			</option>
 		</select>
-		<button @click="searchBooks" class="btn btn-primary">
+		<button v-if="!search" class="btn btn-primary" disabled>
+			<i class="bi bi-search"></i>
+		</button>
+		<button v-else @click="searchBooks" class="btn btn-primary">
 			<i class="bi bi-search"></i>
 		</button>
 	</section>
@@ -42,7 +45,7 @@ export default {
 				{ text: '인명', value: 'person' }
 			],
 			search: '',
-			size: 10,
+			size: 30,
 			numbers: [
 				{ text: '10개씩', value: 10 },
 				{ text: '20개씩', value: 20 },

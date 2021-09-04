@@ -17,10 +17,12 @@
 						저자: {{ book.authors[0] || '정보가 없습니다' }}
 					</div>
 					<div class="text">
-						도서 정가: {{ book.price || '정보가 없습니다' }}원
+						도서 정가: {{ price(book.price) || '정보가 없습니다' }}
+						<span v-if="book.price">원</span>
 					</div>
 					<div class="text">
-						도서 판매가: {{ book.sale_price || '정보가 없습니다' }}원
+						도서 판매가: {{ price(book.sale_price) || '정보가 없습니다' }}
+						<span v-if="book.price">원</span>
 					</div>
 				</template>
 			</ACardMeta>
@@ -39,8 +41,13 @@ export default {
 
 	methods: {
 		toBooks() {
-			const url = this.book.isbn.split(' ')
-			this.$router.push(`/books/${url[0]}`)
+			// const url = this.book.isbn.split(' ')
+			// this.$router.push(`/books/${url[0]}`)
+			const url = this.book.title
+			this.$router.push(`/books/${url}`)
+		},
+		price(x) {
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 		}
 	}
 }

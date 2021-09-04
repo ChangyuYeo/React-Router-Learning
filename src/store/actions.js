@@ -7,9 +7,12 @@ export default {
 		commit('CHANGE_LOADING', true)
 		try {
 			const { data } = await fetchBookList(books)
+			if (data.documents.length === 0) {
+				commit('SET_MESSAGE', '해당 검색 결과의 내용을 찾을 수 없습니다.')
+			}
 			commit('SET_BOOKS', data.documents)
 		} catch (error) {
-			commit('SET_MESSAGE', '검색창에 빈칸 없이 입력해 주세요!')
+			console.error(error.message)
 		} finally {
 			commit('CHANGE_LOADING', false)
 		}
@@ -22,7 +25,7 @@ export default {
 			const { data } = await fetchBookInfo(book)
 			commit('SET_BOOK', data.documents)
 		} catch (error) {
-			console.error(error)
+			console.error(error.message)
 		} finally {
 			commit('CHANGE_LOADING', false)
 		}

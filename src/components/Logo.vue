@@ -19,5 +19,6 @@ p {
 	font-size: 25px;
 	font-weight: 600;
 	cursor: pointer;
+	margin: 0 !important;
 }
 </style>

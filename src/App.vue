@@ -13,13 +13,13 @@
 
 <script>
 import { mapState } from 'vuex'
-import Header from '@/components/Header'
 import Square from '@/components/Square'
+import Header from '@/components/Header'
 
 export default {
 	components: {
-		Header,
-		Square
+		Square,
+		Header
 	},
 
 	computed: {
