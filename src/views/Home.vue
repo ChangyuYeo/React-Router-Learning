@@ -12,29 +12,28 @@
 	</div>
 </template>
 
-<script>
-import Alert from '@/components/Alert'
-import Headline from '@/components/Headline'
-import Input from '@/components/Input'
-import BookList from '@/components/BookList'
+<script lang="ts">
+import { defineComponent } from 'vue'
+import Alert from '@/components/Alert.vue'
+import Headline from '@/components/Headline.vue'
+import Input from '@/components/Input.vue'
+import BookList from '@/components/BookList.vue'
 import { mapState } from 'vuex'
 
-export default {
+export default defineComponent({
 	components: {
 		Alert,
 		Headline,
 		Input,
 		BookList
 	},
-
 	computed: {
 		...mapState(['message'])
 	},
-
 	created() {
 		this.$store.commit('RESET_BOOKS')
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>
@@ -47,15 +46,12 @@ export default {
 	right: 0;
 	cursor: pointer;
 }
-
 .slide-fade-enter-active {
 	transition: all 0.5s ease-out;
 }
-
 .slide-fade-leave-active {
 	transition: all 0.8s;
 }
-
 .slide-fade-enter-from,
 .slide-fade-leave-to {
 	transform: translateY(20px);

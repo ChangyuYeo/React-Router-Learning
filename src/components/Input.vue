@@ -34,8 +34,10 @@
 	</section>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
 	data() {
 		return {
 			selected: 'title',
@@ -67,7 +69,7 @@ export default {
 			this.$store.dispatch('searchBooks', datas)
 		}
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>

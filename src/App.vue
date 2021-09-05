@@ -14,13 +14,14 @@
 	<Footer />
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { mapState } from 'vuex'
-import Square from '@/components/Square'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Square from '@/components/Square.vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
-export default {
+export default defineComponent({
 	components: {
 		Square,
 		Header,
@@ -48,7 +49,7 @@ export default {
 	created() {
 		this.isShow()
 	}
-}
+})
 </script>
 
 <style lang="scss">

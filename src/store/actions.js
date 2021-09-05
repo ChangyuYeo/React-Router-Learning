@@ -10,6 +10,7 @@ export default {
 			if (data.documents.length === 0) {
 				commit('SET_MESSAGE', '해당 검색 결과의 내용을 찾을 수 없습니다.')
 			}
+			console.log(data.documents)
 			commit('SET_BOOKS', data.documents)
 		} catch (error) {
 			console.error(error.message)

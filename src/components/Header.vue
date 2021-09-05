@@ -21,10 +21,11 @@
 	</header>
 </template>
 
-<script>
-import Logo from '@/components/Logo'
+<script lang="ts">
+import { defineComponent } from 'vue'
+import Logo from '@/components/Logo.vue'
 
-export default {
+export default defineComponent({
 	components: {
 		Logo
 	},
@@ -46,12 +47,12 @@ export default {
 	},
 
 	methods: {
-		isMatch(path) {
+		isMatch(path: RegExp) {
 			if (!path) return false
 			return path.test(this.$route.fullPath)
 		}
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>

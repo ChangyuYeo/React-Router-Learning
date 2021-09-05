@@ -2,14 +2,16 @@
 	<p @click="goHome">Fast Library</p>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
 	methods: {
 		goHome() {
 			this.$router.replace('/')
 		}
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>

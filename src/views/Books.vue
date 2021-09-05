@@ -56,10 +56,11 @@
 	</section>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { mapState } from 'vuex'
 
-export default {
+export default defineComponent({
 	computed: {
 		...mapState(['book', 'loading']),
 		datetime() {
@@ -68,7 +69,7 @@ export default {
 	},
 
 	methods: {
-		price(x) {
+		price(x: number) {
 			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 		}
 	},
@@ -77,7 +78,7 @@ export default {
 		const book = this.$route.params.id
 		this.$store.dispatch('searchBookInfo', book)
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>

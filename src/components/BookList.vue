@@ -9,11 +9,12 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { mapState } from 'vuex'
-import BookItems from '@/components/BookItems'
+import BookItems from '@/components/BookItems.vue'
 
-export default {
+export default defineComponent({
 	components: {
 		BookItems
 	},
@@ -21,7 +22,7 @@ export default {
 	computed: {
 		...mapState(['books', 'message'])
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>

@@ -29,8 +29,10 @@
 	</div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
 	props: {
 		book: {
 			type: Object,
@@ -45,11 +47,11 @@ export default {
 			const url = this.book.title
 			this.$router.push(`/books/${url}`)
 		},
-		price(x) {
+		price(x: number) {
 			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 		}
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>
