@@ -14,6 +14,9 @@
 					</RouterLink>
 				</li>
 			</ul>
+			<a href="https://github.com/ChangyuYeo" target="_blank">
+				<i class="bi bi-github"></i>
+			</a>
 		</nav>
 	</header>
 </template>
@@ -56,15 +59,31 @@ header {
 	padding: 1.5% 0;
 	display: flex;
 	justify-content: space-between;
-	.nav {
-		font-family: 'Roboto', sans-serif;
-		.nav-item {
-			a {
-				color: $secondary;
+	nav {
+		display: flex;
+		align-items: center;
+		.nav {
+			font-family: 'Roboto', sans-serif;
+			flex-direction: row;
+			.nav-item {
+				a {
+					color: $secondary;
+				}
+				.active {
+					color: $primary;
+					font-weight: 600;
+				}
 			}
-			.active {
+		}
+		.bi {
+			color: $gray-500;
+			font-size: 20px;
+			padding-left: 15px;
+			cursor: pointer;
+			transition: 0.2s;
+			&:hover {
+				font-size: 21px;
 				color: $primary;
-				font-weight: 600;
 			}
 		}
 	}

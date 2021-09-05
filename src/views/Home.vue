@@ -1,9 +1,11 @@
 <template>
 	<div>
-		<Alert
-			v-if="message === `해당 검색 결과의 내용을 찾을 수 없습니다.`"
-			class="alert"
-		/>
+		<transition name="slide-fade">
+			<Alert
+				v-if="message === `해당 검색 결과의 내용을 찾을 수 없습니다.`"
+				class="alert"
+			/>
+		</transition>
 		<Headline />
 		<Input />
 		<BookList />
@@ -44,5 +46,19 @@ export default {
 	left: 0;
 	right: 0;
 	cursor: pointer;
+}
+
+.slide-fade-enter-active {
+	transition: all 0.5s ease-out;
+}
+
+.slide-fade-leave-active {
+	transition: all 0.8s;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+	transform: translateY(20px);
+	opacity: 0;
 }
 </style>

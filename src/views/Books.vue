@@ -6,7 +6,14 @@
 		<template v-else>
 			<div class="headline">
 				<ACard hoverable style="width: 240px">
-					<img :src="`${book[0]?.thumbnail}`" width="200" />
+					<div class="thumbnail">
+						<img
+							v-if="book[0]?.thumbnail"
+							:src="`${book[0]?.thumbnail}`"
+							width="200"
+						/>
+						<i v-else class="bi bi-file-image-fill"></i>
+					</div>
 				</ACard>
 				<div class="details">
 					<div class="title">{{ book[0]?.title || '정보가 없습니다.' }}</div>
@@ -84,6 +91,18 @@ section {
 		align-items: center;
 		padding: 0 60px;
 		margin-bottom: 50px;
+		.thumbnail {
+			background-color: $gray-400;
+			height: 320px;
+			display: flex;
+			justify-content: center;
+			.bi {
+				margin: auto 0;
+				font-size: 100px;
+				color: rgba($color: $gray-600, $alpha: 0.7);
+			}
+		}
+
 		.details {
 			* {
 				margin-bottom: 10px;
@@ -118,6 +137,7 @@ section {
 		}
 	}
 	.content {
+		height: 200px;
 		margin-top: 40px;
 		font-size: 16px;
 		line-height: 1.8;

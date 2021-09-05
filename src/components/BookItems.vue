@@ -1,10 +1,9 @@
 <template>
 	<div @click="toBooks" class="item">
 		<ACard hoverable style="width: 240px">
-			<div
-				:style="{ backgroundImage: `url(${book.thumbnail})` }"
-				class="book"
-			></div>
+			<div :style="{ backgroundImage: `url(${book.thumbnail})` }" class="book">
+				<i v-if="!book.thumbnail" class="bi bi-file-image-fill"></i>
+			</div>
 			<ACardMeta :title="book.title" class="title">
 				<template v-slot:description>
 					<div class="text">
@@ -64,6 +63,13 @@ export default {
 		background-color: $gray-400;
 		background-size: cover;
 		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.bi {
+			font-size: 70px;
+			color: rgba($color: $gray-600, $alpha: 0.7);
+		}
 	}
 	.title {
 		margin-top: 10px;

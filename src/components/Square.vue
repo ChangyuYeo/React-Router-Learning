@@ -1,10 +1,12 @@
 <template>
-	<div class="square square-secondary square-1"></div>
-	<div class="square square-secondary square-2"></div>
-	<div class="square square-primary square-3"></div>
-	<div class="square square-primary square-4"></div>
-	<div class="square square-primary square-5"></div>
-	<div class="square square-primary square-6"></div>
+	<div>
+		<div class="square square-secondary square-1"></div>
+		<div class="square square-primary square-2"></div>
+		<div class="square square-secondary square-3"></div>
+		<div class="square square-primary square-4"></div>
+		<div class="square square-primary square-5"></div>
+		<div class="square square-secondary square-6"></div>
+	</div>
 </template>
 
 <script>
@@ -64,10 +66,10 @@ export default {}
 		border-radius: 8px;
 	}
 	&.square-secondary {
-		background-color: rgba($color: $secondary, $alpha: 0.1);
+		background-color: rgba($color: $secondary, $alpha: 0.2);
 	}
 	&.square-primary {
-		background-color: rgba($color: $primary, $alpha: 0.1);
+		background-color: rgba($color: $primary, $alpha: 0.4);
 	}
 
 	@include media-breakpoint-down(sm) {

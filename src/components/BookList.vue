@@ -30,7 +30,7 @@ export default {
 	padding: 0;
 	.message {
 		margin-top: 50px;
-		height: 300px;
+		height: 250px;
 		font-size: 20px;
 		font-weight: 500;
 		text-align: center;

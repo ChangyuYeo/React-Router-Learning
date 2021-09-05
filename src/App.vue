@@ -1,5 +1,7 @@
 <template>
-	<Square />
+	<transition name="fade">
+		<Square v-if="trigger" />
+	</transition>
 	<div class="container">
 		<Header />
 		<router-view v-slot="{ Component }">
@@ -9,21 +11,42 @@
 		</router-view>
 		<ASpin v-if="loading" class="spin" tip="Loading..." size="large" />
 	</div>
+	<Footer />
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import Square from '@/components/Square'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default {
 	components: {
 		Square,
-		Header
+		Header,
+		Footer
+	},
+
+	data() {
+		return {
+			trigger: false
+		}
 	},
 
 	computed: {
 		...mapState(['loading'])
+	},
+
+	methods: {
+		isShow() {
+			setTimeout(() => {
+				this.trigger = true
+			}, 800)
+		}
+	},
+
+	created() {
+		this.isShow()
 	}
 }
 </script>

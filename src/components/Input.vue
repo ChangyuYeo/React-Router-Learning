@@ -45,7 +45,7 @@ export default {
 				{ text: '인명', value: 'person' }
 			],
 			search: '',
-			size: 30,
+			size: 20,
 			numbers: [
 				{ text: '10개씩', value: 10 },
 				{ text: '20개씩', value: 20 },
@@ -57,7 +57,8 @@ export default {
 	},
 
 	methods: {
-		async searchBooks() {
+		searchBooks() {
+			if (!this.search) return
 			const datas = {
 				query: this.search,
 				target: this.selected,
