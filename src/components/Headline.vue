@@ -18,15 +18,15 @@
 		padding-bottom: 1.2%;
 	}
 	:nth-child(1) {
-		font-size: 50px;
+		font-size: 3.2rem;
 		font-weight: 600;
 		color: $primary;
 	}
 	:nth-child(2) {
-		font-size: 20px;
+		font-size: 1.3rem;
 	}
 	:nth-child(3) {
-		font-size: 15px;
+		font-size: 0.9rem;
 		color: $gray-500;
 	}
 }

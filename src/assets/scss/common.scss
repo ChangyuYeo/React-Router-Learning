@@ -16,6 +16,9 @@ $container-max-widths: (
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
+// responsive.scss
+@import "responsive.scss";
+
 body {
   color: $gray-900;
   font-family: 'Noto Sans KR', sans-serif !important;

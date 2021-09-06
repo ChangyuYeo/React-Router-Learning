@@ -27,7 +27,8 @@
 						{{ book[0]?.publisher || '정보가 없습니다.' }}
 					</div>
 					<div class="detail-content">
-						<span class="badge">출판날짜</span> {{ datetime }}
+						<span class="badge">출판날짜</span>
+						{{ this.book[0]?.datetime.substring(0, 10) || '정보가 없습니다.' }}
 					</div>
 					<div class="detail-content">
 						<span class="badge">정가</span>
@@ -57,15 +58,13 @@
 </template>
 
 <script lang="ts">
+import { ActionTypes } from '@/store/actions'
 import { defineComponent } from 'vue'
 import { mapState } from 'vuex'
 
 export default defineComponent({
 	computed: {
-		...mapState(['book', 'loading']),
-		datetime() {
-			return this.book[0]?.datetime.substring(0, 10) || '정보가 없습니다.'
-		}
+		...mapState(['book', 'loading'])
 	},
 
 	methods: {
@@ -76,7 +75,7 @@ export default defineComponent({
 
 	created() {
 		const book = this.$route.params.id
-		this.$store.dispatch('searchBookInfo', book)
+		this.$store.dispatch(ActionTypes.FETCH_BOOK_INFO, book)
 	}
 })
 </script>
@@ -94,6 +93,7 @@ section {
 		margin-bottom: 50px;
 		.thumbnail {
 			background-color: $gray-400;
+			width: 190px;
 			height: 320px;
 			display: flex;
 			justify-content: center;
@@ -107,12 +107,12 @@ section {
 		.details {
 			* {
 				margin-bottom: 10px;
-				font-size: 20px;
+				font-size: 1.2rem;
 				color: $gray-700;
 			}
 			.title {
 				width: 340px;
-				font-size: 30px;
+				font-size: 1.8rem;
 				font-weight: 600;
 				color: $gray-900;
 				white-space: pre-line;
@@ -122,13 +122,13 @@ section {
 				align-items: center;
 				span {
 					margin: 0;
-					font-size: 16px;
+					font-size: 1rem;
 					color: $gray-600;
 				}
 				.badge {
 					font-family: 'Noto Sans KR', sans-serif;
 					font-weight: 400;
-					font-size: 14px;
+					font-size: 0.9rem;
 					color: $gray-500;
 					padding: 0;
 					margin: 0;
@@ -140,12 +140,21 @@ section {
 	.content {
 		height: 200px;
 		margin-top: 40px;
-		font-size: 16px;
+		font-size: 1rem;
 		line-height: 1.8;
 		:first-child {
-			font-size: 20px;
+			font-size: 1.3rem;
 			color: $gray-500;
 			margin-bottom: 10px;
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.headline {
+		flex-direction: column;
+		.details {
+			margin-top: 20px;
 		}
 	}
 }

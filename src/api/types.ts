@@ -1,3 +1,8 @@
+interface BookData {
+	documents: BookItem[]
+	meta: { is_end: boolean; pageable_count: number; total_count: number }
+}
+
 interface BookItem {
 	authors: string[]
 	contents: string
@@ -19,4 +24,4 @@ interface BookParams {
 	size: number
 }
 
-export { BookItem, BookParams }
+export { BookData, BookItem, BookParams }

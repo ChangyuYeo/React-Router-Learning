@@ -18,7 +18,7 @@ export default defineComponent({
 p {
 	color: $primary;
 	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
+	font-size: 2rem;
 	font-weight: 600;
 	cursor: pointer;
 	margin: 0 !important;

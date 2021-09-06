@@ -35,6 +35,7 @@
 </template>
 
 <script lang="ts">
+import { ActionTypes } from '@/store/actions'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -66,7 +67,7 @@ export default defineComponent({
 				target: this.selected,
 				size: this.size
 			}
-			this.$store.dispatch('searchBooks', datas)
+			this.$store.dispatch(ActionTypes.FETCH_BOOKS, datas)
 		}
 	}
 })
@@ -85,6 +86,29 @@ section {
 	}
 	:is(.form-select, .btn) {
 		width: 120px;
+	}
+	@include media-breakpoint-down(sm) {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		> * {
+			margin: 0;
+		}
+		:nth-child(1) {
+			order: 2;
+			width: 130px;
+		}
+		:nth-child(2) {
+			order: 1;
+			margin-bottom: 10px;
+		}
+		:nth-child(3) {
+			order: 3;
+			width: 130px;
+		}
+		:nth-child(4) {
+			order: 4;
+			width: 130px;
+		}
 	}
 }
 </style>

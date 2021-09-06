@@ -19,6 +19,7 @@ import Headline from '@/components/Headline.vue'
 import Input from '@/components/Input.vue'
 import BookList from '@/components/BookList.vue'
 import { mapState } from 'vuex'
+import { MutationTypes } from '@/store/mutations'
 
 export default defineComponent({
 	components: {
@@ -31,7 +32,7 @@ export default defineComponent({
 		...mapState(['message'])
 	},
 	created() {
-		this.$store.commit('RESET_BOOKS')
+		this.$store.commit(MutationTypes.RESET_BOOKS)
 	}
 })
 </script>

@@ -23,6 +23,7 @@
 </template>
 
 <script lang="ts">
+import { MutationTypes } from '@/store/mutations'
 import { defineComponent } from 'vue'
 import { mapState } from 'vuex'
 
@@ -33,7 +34,7 @@ export default defineComponent({
 
 	methods: {
 		close() {
-			this.$store.commit('RESET_BOOKS')
+			this.$store.commit(MutationTypes.RESET_BOOKS)
 		}
 	}
 })

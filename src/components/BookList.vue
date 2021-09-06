@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div v-if="!books[0]" class="message">
+		<div v-if="!books" class="message">
 			{{ message }}
 		</div>
 		<div v-else class="books">
@@ -32,7 +32,7 @@ export default defineComponent({
 	.message {
 		margin-top: 50px;
 		height: 250px;
-		font-size: 20px;
+		font-size: 1.3rem;
 		font-weight: 500;
 		text-align: center;
 		color: $gray-500;
