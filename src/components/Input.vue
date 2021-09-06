@@ -117,7 +117,7 @@ section {
 	}
 	@include media-breakpoint-down(sm) {
 		:is(:nth-child(1), :nth-child(3), :nth-child(4)) {
-			width: 100px;
+			width: 120px;
 		}
 	}
 }

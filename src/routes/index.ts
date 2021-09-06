@@ -8,6 +8,10 @@ const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/books/:id',
 		component: () => import('@/views/Books.vue')
+	},
+	{
+		path: '/:pathMatch(.*)',
+		component: () => import('@/views/NotFound.vue')
 	}
 ]
 
