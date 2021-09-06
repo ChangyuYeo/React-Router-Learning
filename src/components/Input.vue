@@ -87,7 +87,7 @@ section {
 	:is(.form-select, .btn) {
 		width: 120px;
 	}
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		> * {

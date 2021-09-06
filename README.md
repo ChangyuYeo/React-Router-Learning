@@ -1,7 +1,11 @@
 # vue_book_app 📚
 ## Fast Library
 카카오 API를 이용한 도서 검색 웹 애플리케이션 만들기! <br />
-[<a href="/">DEMO</a>] 버전 보러가기!
+[<a href="https://fastlibray.netlify.app">DEMO</a>] 버전 보러가기!
+<br />
+
+## 프로젝트 미리보기
+![project](https://user-images.githubusercontent.com/80776262/132224040-948d3873-0748-4e5a-beaa-f948fffd5e66.gif)
 <br />
 
 ## 프로젝트 환경 및 사용 라이브러리 ✒
