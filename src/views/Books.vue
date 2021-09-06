@@ -11,6 +11,7 @@
 							v-if="book[0]?.thumbnail"
 							:src="`${book[0]?.thumbnail}`"
 							width="200"
+							:alt="book[0]?.title"
 						/>
 						<i v-else class="bi bi-file-image-fill"></i>
 					</div>

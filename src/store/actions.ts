@@ -4,12 +4,12 @@ import { ActionContext } from 'vuex'
 import { MutationTypes } from './mutations'
 import { RootState } from './state'
 
-export enum ActionTypes {
+enum ActionTypes {
 	FETCH_BOOKS = 'FETCH_BOOKS',
 	FETCH_BOOK_INFO = 'FETCH_BOOK_INFO'
 }
 
-export default {
+const actions = {
 	async [ActionTypes.FETCH_BOOKS](
 		{ state, commit }: ActionContext<RootState, RootState>,
 		books: BookParams
@@ -49,3 +49,5 @@ export default {
 		}
 	}
 }
+
+export { ActionTypes, actions }

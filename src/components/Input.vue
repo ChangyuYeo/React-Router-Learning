@@ -87,7 +87,7 @@ section {
 	:is(.form-select, .btn) {
 		width: 120px;
 	}
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		> * {
@@ -95,7 +95,7 @@ section {
 		}
 		:nth-child(1) {
 			order: 2;
-			width: 130px;
+			width: 200px;
 		}
 		:nth-child(2) {
 			order: 1;
@@ -103,11 +103,21 @@ section {
 		}
 		:nth-child(3) {
 			order: 3;
-			width: 130px;
+			width: 200px;
 		}
 		:nth-child(4) {
 			order: 4;
-			width: 130px;
+			width: 200px;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		:is(:nth-child(1), :nth-child(3), :nth-child(4)) {
+			width: 150px;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		:is(:nth-child(1), :nth-child(3), :nth-child(4)) {
+			width: 100px;
 		}
 	}
 }

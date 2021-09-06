@@ -1,7 +1,7 @@
 import { BookItem } from '@/api/types'
 import { RootState } from './state'
 
-export enum MutationTypes {
+enum MutationTypes {
 	SET_BOOKS = 'SET_BOOKS',
 	SET_BOOK = 'SET_BOOK',
 	RESET_BOOKS = 'RESET_BOOKS',
@@ -9,7 +9,7 @@ export enum MutationTypes {
 	SET_MESSAGE = 'SET_MESSAGE'
 }
 
-export default {
+const mutations = {
 	[MutationTypes.SET_BOOKS](state: RootState, books: BookItem[]) {
 		state.books = books
 	},
@@ -28,3 +28,5 @@ export default {
 		state.message = message
 	}
 }
+
+export { MutationTypes, mutations }
