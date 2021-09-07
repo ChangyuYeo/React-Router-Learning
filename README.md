@@ -1,24 +1,27 @@
 # vue_book_app 📚
 카카오 API를 이용한 도서 검색 웹 애플리케이션 만들기!
 <br /><br />
+
 ## Fast Library 📖
 검색 하나로 책에 대한 정보를 빠르게 받을 수 있는 **Fast Library** 입니다
 <br />
 [<a href="https://fastlibray.netlify.app">DEMO</a>] 버전 보러가기!
 <br /><br />
 
+### 사용한 기술 스택
+<div>
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/typescript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/scss-CC6699?style=flat-square&logo=Sass&logoColor=white" >
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=Bootstrap&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ant Design-0170FE?style=flat-square&logo=Ant Design&logoColor=white" />
+</div>
+<br /><br />
+
 ## 프로젝트 미리보기 🖥
 ![project](https://user-images.githubusercontent.com/80776262/132224040-948d3873-0748-4e5a-beaa-f948fffd5e66.gif)
 <br /><br />
 
-## 프로젝트 환경 및 사용 라이브러리 ✒
-- vue
-- vuex
-- typescript
-- scss
-- Bootstrap
-- Ant Design
-<br />
 
 ## TodoList 📌
 - [x] 오픈 api 연결해서 테스트, api 폴더 만들고 로직 구현하기
